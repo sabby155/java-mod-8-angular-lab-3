@@ -1,16 +1,37 @@
 section {
     width: 100%;
+    height: auto;
+    color: white;
+    background-color: darkblue;
+    padding: 100px 30px;
+}
+.main-container {
+    width: 100%;
     display: flex;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
 }
 .half {
     width: 50%;
 }
 .form {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+input {
+    background-color: darkblue;
+    border: 1px solid white;
+    padding: 5px;
+    min-width: 250px;
+}
+input, select, textarea{
+    color: white;
 }
 
 span {
@@ -20,4 +41,14 @@ span {
 .form button {
     width: 150px;
     height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.form button:hover {
+    cursor: pointer;
+    background-color: darkblue;
+    border-radius: 5px;
+    border-color: white;
+    color: white;
 }

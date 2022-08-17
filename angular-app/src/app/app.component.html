@@ -1,34 +1,36 @@
 
+
 <section>
-  <div class="half">
-    <h1>{{title}}</h1>
-  
-    <h2>Athletes</h2>
-    <div>
-      <ul *ngFor="let athlete of athletes">
-        <li>{{athlete.name}} ({{athlete.sport}}) is {{athlete.active ? 'active' : 'not active'}}</li>
-      </ul>
+  <h1>{{title}}</h1>
+  <div class="main-container">
+    <div class="half">
+      <h2>Athletes</h2>
+      <div>
+        <ul *ngFor="let athlete of athletes">
+          <li>{{athlete.name}} ({{athlete.sport}}) is {{athlete.active ? 'active' : 'not active'}}</li>
+        </ul>
+      </div>
     </div>
+  
+  
+    <form class="form half">
+      <h3>Add an Athlete - Form</h3>
+  
+      <span>
+        <label for="name">Name: </label>
+        <input type="text" [(ngModel)]="name" name="name"/>
+      </span>
+      <span>
+        <label for="sport">Sport: </label>
+        <input type="text" [(ngModel)]="sport" name="sport"/>
+      </span>
+      <span>
+        <label for="active">Active: </label>
+        <input type="checkbox" [(ngModel)]="active" name="active"/>
+      </span>
+  
+      <button type="submit" (click)="onSendAthlete()">Submit Athlete</button>
+    </form>
   </div>
-
-
-  <form class="form half">
-    <h3>Add an Athlete - Form</h3>
-
-    <span>
-      <label for="name">Name: </label>
-      <input type="text" [(ngModel)]="name" name="name"/>
-    </span>
-    <span>
-      <label for="sport">Sport: </label>
-      <input type="text" [(ngModel)]="sport" name="sport"/>
-    </span>
-    <span>
-      <label for="active">Active: </label>
-      <input type="checkbox" [(ngModel)]="active" name="active"/>
-    </span>
-
-    <button type="submit" (click)="onSendAthlete()">Submit Athlete</button>
-  </form>
 
 </section>
