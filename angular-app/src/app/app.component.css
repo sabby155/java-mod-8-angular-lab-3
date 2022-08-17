@@ -1,0 +1,23 @@
+section {
+    width: 100%;
+    display: flex;
+}
+.half {
+    width: 50%;
+}
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    padding: 20px 15px 20px;
+}
+
+.form button {
+    width: 150px;
+    height: 50px;
+}
